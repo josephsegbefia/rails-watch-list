@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>All lists</h1>
+
+  <ol>
+    <% @lists.each do |list| %>
+      <li><%= list.name%></li>
+    <% end %>
+  </ol>
+</div>
