@@ -8,7 +8,7 @@
 }
 
 .create-list-button {
-  padding: 6px;
+  padding: 0.7rem;
   color: white;
   background-color: $green;
   text-decoration: none;
@@ -18,6 +18,11 @@
     color: $green;
     background-color: white;
   }
+}
+
+.list-category-link {
+  text-decoration: none;
+  color: white;
 }
 
 .card-category {
