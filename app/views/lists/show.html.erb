@@ -1,21 +1,27 @@
 <div class = "hero">
   <div class = "top-bar">
-    <% count = @list.movies.count %>
-    <% if count > 1 %>
-      <%= content_tag(:span, "#{count} movies", class: "movie-count-indicator") %>
-    <% elsif count == 0 %>
-      <%= content_tag(:span, "No movie added yet", class: "movie-count-indicator") %>
-    <% else %>
-      <%= content_tag(:span, "#{count} movie", class: "movie-count-indicator") %>
-    <% end %>
-  </div>
-  <div class = "title">
-    <h3><%= @list.name %></h3>
-  </div>
+  <% count = @list.movies.count %>
+  <% if count > 1 %>
+    <%= content_tag(:span, "#{count} movies", class: "movie-count-indicator") %>
+  <% elsif count == 0 %>
+    <%= content_tag(:span, "No movie added yet", class: "movie-count-indicator") %>
+  <% else %>
+    <%= content_tag(:span, "#{count} movie", class: "movie-count-indicator") %>
+  <% end %>
+</div>
+<div class = "title">
+  <h3><%= @list.name %></h3>
+</div>
 </div>
 
 <div class = "content">
   <div class = "button-container">
     <%= link_to "add a movie", new_list_bookmark_path(@list), class: "add-movie-button" %>
+  </div>
+
+  <div class = "movies-container">
+    <% @list.movies.each do |movie| %>
+      <%= movie.title%>
+    <% end %>
   </div>
 </div>
