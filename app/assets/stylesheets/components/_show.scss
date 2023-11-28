@@ -33,6 +33,7 @@
 
 .content {
   width: 90%;
+  margin: 0 auto;
 }
 .add-movie-button {
   padding: 0.3rem;
@@ -40,4 +41,69 @@
   color: white;
   text-decoration: none;
   border-radius: 0.2rem;
+}
+
+
+.movie-card-category {
+  background-size: auto;
+  background-position: center;
+  // background-repeat: no-repeat;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+
+.movie-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.poster-image {
+
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .movie-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .movie-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .movie-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .movie-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .movie-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

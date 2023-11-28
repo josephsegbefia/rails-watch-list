@@ -20,8 +20,15 @@
   </div>
 
   <div class = "movies-container">
+    <div class="movie-cards">
     <% @list.movies.each do |movie| %>
-      <%= movie.title%>
+      <% background_image = "https://image.tmdb.org/t/p/w92/#{movie.poster_url}"%>
+      <div class="movie-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= background_image %>)">
+        <%= content_tag(:span, movie.title, class: "title") %> ⋅ <%= content_tag(:span, "#{movie.rating} ⭐", class: "rating")  %>
+      </div>
+
+
     <% end %>
+  </div>
   </div>
 </div>
