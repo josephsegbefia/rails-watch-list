@@ -23,9 +23,16 @@
     <div class="movie-cards">
     <% @list.movies.each do |movie| %>
       <% background_image = "https://image.tmdb.org/t/p/w92/#{movie.poster_url}"%>
-      <div class="movie-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= background_image %>)">
-        <%= content_tag(:span, movie.title, class: "title") %> ⋅ <%= content_tag(:span, "#{movie.rating} ⭐", class: "rating")  %>
+      <div>
+        <div class="movie-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= background_image %>)">
+          <%= content_tag(:span, movie.title, class: "title") %> ⋅ <%= content_tag(:span, "#{movie.rating} ⭐", class: "rating")  %>
+        </div>
+
+        <div class="movie-card-category-info">
+          <p><%= movie.overview.truncate(100)%></p>
+        </div>
       </div>
+
 
 
     <% end %>
