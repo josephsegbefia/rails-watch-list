@@ -8,7 +8,7 @@ gem "rails", "~> 7.1.2"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-
+# gem "error_highlight", "~> 0.6.0"
 ####### ADDED GEMS ##############
 gem "bootstrap", "~> 5.2"
 gem "autoprefixer-rails"
@@ -27,7 +27,7 @@ gem "puma", ">= 5.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 
-gem 'error_highlight', '0.6.0'
+# gem 'error_highlight', '0.6.0'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
