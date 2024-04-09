@@ -2,11 +2,11 @@ databases:
   - name: rails_watch_list
     databaseName: rails_watch_list
     user: rails_watch_list
-    plan: free
+    plan: starter
 
 services:
   - type: web
-    plan: free
+    plan: starter
     name: rails_watch_list
     env: ruby
     buildCommand: "./bin/render-build.sh"
