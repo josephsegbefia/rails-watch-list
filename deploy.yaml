@@ -1,0 +1,20 @@
+databases:
+  - name: rails_watch_list
+    databaseName: rails_watch_list
+    user: rails_watch_list
+    plan: free
+
+services:
+  - type: web
+    plan: free
+    name: rails_watch_list
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: rails_watch_list
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
